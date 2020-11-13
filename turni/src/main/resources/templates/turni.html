@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title> Thymeleaf Hello World </title>
+
+    <link type="text/css"
+          rel="stylesheet"
+          href="/resources/templates.css/style.css" />
+    <title>Test</title>
+</head>
+<body>
+<table border=1>
+    <tr>
+        <th>ID</th>
+        <th>Cognome</th>
+        <th>Nome</th>
+    </tr>
+
+
+        <th:block th:each="tempTurni : ${lista}">
+
+        <tr>
+            <td><span th:text="${tempTurni.id}"> ID </span></td>
+            <td><span th:text="${tempTurni.cognome}"> Cognome </span></td>
+            <td><span th:text="${tempTurni.nome}"> Nome </span></td>
+
+        </tr>
+
+        </th:block>
+
+</table>
+
+</body>
+</html>
